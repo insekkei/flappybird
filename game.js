@@ -1,6 +1,8 @@
 const RAD = Math.PI / 180;
 const scrn = document.getElementById("canvas");
 const sctx = scrn.getContext("2d");
+
+let intervalTimer;
 scrn.tabIndex = 1;
 scrn.addEventListener("click", () => {
   switch (state.curr) {
@@ -87,7 +89,7 @@ const bg = {
 const pipe = {
   top: { sprite: new Image() },
   bot: { sprite: new Image() },
-  gap: 85,
+  gap: 125,
   moved: true,
   pipes: [],
   draw: function () {
@@ -130,7 +132,7 @@ const bird = {
   x: 50,
   y: 100,
   speed: 0,
-  gravity: 0.125,
+  gravity: 0.185,
   thrust: 3.6,
   frame: 0,
   draw: function () {
@@ -254,7 +256,7 @@ const UI = {
   },
   drawScore: function () {
     sctx.fillStyle = "#FFFFFF";
-    sctx.strokeStyle = "#000000";
+    sctx.strokeStyle = "#fff";
     switch (state.curr) {
       case state.Play:
         sctx.lineWidth = "2";
@@ -271,6 +273,7 @@ const UI = {
             this.score.curr,
             localStorage.getItem("best")
           );
+          
           localStorage.setItem("best", this.score.best);
           let bs = `BEST  :     ${this.score.best}`;
           sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
@@ -280,6 +283,14 @@ const UI = {
         } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
+        }
+        if (window.__wxjs_environment === 'miniprogram') {
+          setTimeout(() => {
+            wx.miniProgram.navigateBack();
+            wx.miniProgram.postMessage({ data: {current: this.score.curr, best: localStorage.getItem("best")} });
+          }, 1000);
+          
+          intervalTimer && clearInterval(intervalTimer);
         }
 
         break;
@@ -334,4 +345,4 @@ function draw() {
   UI.draw();
 }
 
-setInterval(gameLoop, 20);
+intervalTimer = setInterval(gameLoop, 20);

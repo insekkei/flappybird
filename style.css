@@ -1,9 +1,25 @@
-#canvas
-{
+body, html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: url('https://vfiles.gtimg.cn/files/20230109_rg3o9hv3vni6brkvrw8vdb3y90bkwqbb.jpeg') no-repeat center;
+    background-size: cover;
+}
+#canvas {
     background-color:#30c0df;
-    border: 2px solid black;
     display: block;
-    margin: auto;
-    padding: auto;
-    
+    border-radius: 10px;
+}
+
+#rule {
+    width: 88px;
+    height: auto;
+    margin: -30px calc(50vw - 138px) 30px auto;
 }

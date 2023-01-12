@@ -9,7 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img src="https://vfiles.gtimg.cn/files/20230112_eapp64z3k0uuc32apj3hdd5blwlj7fed.png" id="rule" />
     <canvas id="canvas" width="276" height="414"></canvas>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
     <script src="game.js"></script>
+    <script>
+        if (window.__wxjs_environment === 'miniprogram') {
+            document.querySelector('#rule').onclick = function() {
+                wx.miniProgram.navigateTo({
+                    url: '/pages/flappybird/rule/index'
+                })
+            }
+        }
+    </script>
 </body>
 </html>

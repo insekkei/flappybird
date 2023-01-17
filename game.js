@@ -303,23 +303,23 @@ const UI = {
   },
 };
 
-gnd.sprite.src = "img/ground.png";
-bg.sprite.src = "img/BG.png";
-pipe.top.sprite.src = "img/toppipe.png";
-pipe.bot.sprite.src = "img/botpipe.png";
-UI.gameOver.sprite.src = "img/go.png";
-UI.getReady.sprite.src = "img/getready.png";
-UI.tap[0].sprite.src = "img/tap/t0.png";
-UI.tap[1].sprite.src = "img/tap/t1.png";
-bird.animations[0].sprite.src = "img/bird/b0.png";
-bird.animations[1].sprite.src = "img/bird/b1.png";
-bird.animations[2].sprite.src = "img/bird/b2.png";
-bird.animations[3].sprite.src = "img/bird/b0.png";
-SFX.start.src = "sfx/start.wav";
-SFX.flap.src = "sfx/flap.wav";
-SFX.score.src = "sfx/score.wav";
-SFX.hit.src = "sfx/hit.wav";
-SFX.die.src = "sfx/die.wav";
+gnd.sprite.src = "https://vfiles.gtimg.cn/files/20230117_k5uwmkxlihf3r73by06vy8p7cnbxsi4q.png";
+bg.sprite.src = "https://vfiles.gtimg.cn/files/20230117_hzbi66bpacc1uxmhy9vf7whbnld9qwxf.png";
+pipe.top.sprite.src = "https://vfiles.gtimg.cn/files/20230117_2saezcppr9c8zhp8apwt1dl320ofxp74.png";
+pipe.bot.sprite.src = "https://vfiles.gtimg.cn/files/20230117_9g1iamo0ozbu2okmqa7y7dpiaymlcc1c.png";
+UI.gameOver.sprite.src = "https://vfiles.gtimg.cn/files/20230117_040xjp2s291a1e9e2ik3p32fn3bd89q4.png";
+UI.getReady.sprite.src = "https://vfiles.gtimg.cn/files/20230117_6e66tut4aioerpefwe4g8cc2kx1x18pk.png";
+UI.tap[0].sprite.src = "https://vfiles.gtimg.cn/files/20230117_3hhhqa0814i1v0vhsk4iwsrnrfp3mqz1.png";
+UI.tap[1].sprite.src = "https://vfiles.gtimg.cn/files/20230117_203p2j9n7toazrymnxov1e38y17kngva.png";
+bird.animations[0].sprite.src = "https://vfiles.gtimg.cn/files/20230117_lbym6oljzednkib7lx0yjgqaho0r3jml.png";
+bird.animations[1].sprite.src = "https://vfiles.gtimg.cn/files/20230117_8l16v5j5jopcvthd3r01uu4cyrxpw1m7.png";
+bird.animations[2].sprite.src = "https://vfiles.gtimg.cn/files/20230117_e6d9pwqfm9pydlry4ge7xn7d3b4xaqk3.png";
+bird.animations[3].sprite.src = "https://vfiles.gtimg.cn/files/20230117_lbym6oljzednkib7lx0yjgqaho0r3jml.png";
+SFX.start.src = "https://vfiles.gtimg.cn/files/20230117_m3zdzt6rn90j1cti55ftjfnfrjssda7n.wav";
+SFX.flap.src = "https://vfiles.gtimg.cn/files/20230117_njheht3w1fi75fzc3athraoyibszaitz.wav";
+SFX.score.src = "https://vfiles.gtimg.cn/files/20230117_ooxrpj2uxcnrtc032rexdmid78jvlvdu.wav";
+SFX.hit.src = "https://vfiles.gtimg.cn/files/20230117_bg8ejpr0l6oazq2yn0axw56x4nzuzrw5.wav";
+SFX.die.src = "https://vfiles.gtimg.cn/files/20230117_x74m8b1mwaq7gh37ajwzsejal9diby1h.wav";
 
 function gameLoop() {
   update();
